@@ -1,0 +1,7 @@
+[run]
+source =
+    .
+omit =
+    .venv/*
+    test/*
+    conftest.py
