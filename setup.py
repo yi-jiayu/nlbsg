@@ -16,4 +16,5 @@ setup(name='nlbsg',
       install_requires=[
           'zeep',
       ],
+      python_requires=">=3.6",
       zip_safe=False)
