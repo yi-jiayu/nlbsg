@@ -36,8 +36,8 @@ Searching the catalogue::
 
     >>> from nlbsg import MediaCode
     >>> results = client.search('lord of the rings', author='tolkien', media_code=MediaCode.BOOKS, limit=3)
-    >>> for title in results['Titles']:
-    ...     print(f'Title: {title["TitleName"]}\nISBN: {title["ISBN"]}\nPublished: {title["PublishYear"]}\n')
+    >>> for title in results.titles:
+    ...     print(f'Title: {title.title_name}\nISBN: {title.isbn}\nPublished: {title.publish_year}\n')
     ...
     Title: Beren and Lúthien / by  J.R.R. Tolkien ; edited by Christopher Tolkien ; with illustrations by  Alan Lee.
     ISBN: 1328915336 (paperback)
@@ -54,14 +54,14 @@ Searching the catalogue::
 Getting title details::
 
     >>> details = client.get_title_details(isbn='1328915336')
-    >>> details['TitleDetail']['Summary']
+    >>> details.title_detail.summary
     "The epic tale of Beren and Lúthien became an essential element in the evolution of The Silmarillion, the myths and legends of J.R.R. Tolkien's First Age of the World. Always key to the story is the fate that shadowed their love: Beren was a mortal man, Lúthien an immortal Elf. Her father, a great Elvish lord, imposed on Beren an impossible task before he might wed Lúthien: to rob the greatest of all evil beings, Melkor, of a Silmaril.Painstakingly restored from Tolkien's manuscripts and presented for the first time as a continuous and standalone story, Beren and Lúthien reunites fans of The Hobbit and The Lord of the Rings with Elves and Men, along with the rich landscape and creatures unique to Tolkien's Middle-earth. Christopher Tolkien tells the story in his father's own words by giving its original form as well as prose and verse passages from later texts that illustrate the narrative as it changed. -- from back cover."
 
 Getting title availability::
 
     >>> availability = client.get_availability_info(isbn='1328915336')
-    >>> for item in availability['Items']:
-    ...     print(f'Branch: {item["BranchName"]}\nStatus: {item["StatusDesc"]}\n')
+    >>> for item in availability.items:
+    ...     print(f'Branch: {item.branch_name}\nStatus: {item.status_desc}\n')
     ...
     Branch: Ang Mo Kio Public Library
     Status: Not On Loan
