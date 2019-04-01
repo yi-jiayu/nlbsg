@@ -3,7 +3,7 @@ from setuptools import setup
 with open('README.md') as f:
     long_description = f.read()
 
-setup(name='nlblg',
+setup(name='nlbsg',
       version='0.1.1',
       description='Python SDK for the NLB Open Web Services',
       long_description=long_description,
