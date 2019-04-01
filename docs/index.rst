@@ -12,6 +12,10 @@ Welcome to nlbsg's documentation!
 .. image:: https://codecov.io/gh/yi-jiayu/nlbsg/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/yi-jiayu/nlbsg
 
+.. image:: https://img.shields.io/pypi/v/nlbsg.svg
+   :target: https://pypi.org/project/nlbsg/
+   :alt: PyPI
+
 .. image:: https://readthedocs.org/projects/nlbsg/badge/?version=latest
    :target: https://nlbsg.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
@@ -19,6 +23,13 @@ Welcome to nlbsg's documentation!
 Python wrapper for the `NLB Open Web Services <http://www.nlb.gov.sg/labs/technical-documentation/>`_.
 
 Currently supports the `Catalogue Service <http://www.nlb.gov.sg/labs/technical-documentation/#catalogue-service>`_.
+
+Installation
+------------
+
+::
+
+    pip install nlbsg
 
 Usage example
 -------------
