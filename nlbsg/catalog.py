@@ -61,6 +61,14 @@ class Client:
             }
         }
 
+    @staticmethod
+    def _search_result(result):
+        try:
+            result['Titles'] = result['Titles']['Title']
+        except TypeError:
+            pass
+        return result
+
     def search(self, keywords=None, author=None, subject=None, title=None,
                branch=None, media_code=None, language=None,
                sort=None, start=1, limit=10, set_id=None):
@@ -88,7 +96,16 @@ class Client:
         search_request = self._search_request(self.api_key, keywords, author, subject, title,
                                               branch, media_code, language,
                                               sort, start, limit, set_id)
-        return self._zeep.service.Search(**search_request)
+        result = self._zeep.service.Search(**search_request)
+        return self._search_result(result)
+
+    @staticmethod
+    def _details(details):
+        try:
+            details['TitleDetail']['Subjects'] = details['TitleDetail']['Subjects']['Subject']
+        except TypeError:
+            pass
+        return details
 
     def get_title_details(self, bid=None, isbn=None):
         """
@@ -98,9 +115,18 @@ class Client:
         :param isbn:
         :return:
         """
-        return self._zeep.service.GetTitleDetails(APIKey=self.api_key,
-                                                  BID=bid,
-                                                  ISBN=isbn)
+        details = self._zeep.service.GetTitleDetails(APIKey=self.api_key,
+                                                     BID=bid,
+                                                     ISBN=isbn)
+        return self._details(details)
+
+    @staticmethod
+    def _availability(availability):
+        try:
+            availability['Items'] = availability['Items']['Item']
+        except TypeError:
+            pass
+        return availability
 
     def get_availability_info(self, bid=None, isbn=None, sort=None, start=1, limit=10, set_id=None):
         """
@@ -118,12 +144,14 @@ class Client:
                        the next record in the backend system
         :return:
         """
-        return self._zeep.service.GetAvailabilityInfo(APIKey=self.api_key,
-                                                      BID=bid,
-                                                      ISBN=isbn,
-                                                      Modifiers={
-                                                          'SortSchema': sort.value if isinstance(sort, Sort) else sort,
-                                                          'StartRecordPosition': start,
-                                                          'MaximumRecords': limit,
-                                                          'SetId': set_id,
-                                                      })
+        availability = self._zeep.service.GetAvailabilityInfo(APIKey=self.api_key,
+                                                              BID=bid,
+                                                              ISBN=isbn,
+                                                              Modifiers={
+                                                                  'SortSchema': sort.value if isinstance(sort,
+                                                                                                         Sort) else sort,
+                                                                  'StartRecordPosition': start,
+                                                                  'MaximumRecords': limit,
+                                                                  'SetId': set_id,
+                                                              })
+        return self._availability(availability)

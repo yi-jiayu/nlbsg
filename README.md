@@ -25,7 +25,7 @@ Searching the catalogue:
 ```python
 >>> from nlbsg import MediaCode
 >>> results = client.search('lord of the rings', author='tolkien', media_code=MediaCode.BOOKS, limit=3)
->>> for title in results['Titles']['Title']:
+>>> for title in results['Titles']:
 ...     print(f'Title: {title["TitleName"]}\nISBN: {title["ISBN"]}\nPublished: {title["PublishYear"]}\n')
 ...
 Title: Beren and Lúthien / by  J.R.R. Tolkien ; edited by Christopher Tolkien ; with illustrations by  Alan Lee.
@@ -53,7 +53,7 @@ Getting title availability:
 
 ```python
 >>> availability = client.get_availability_info(isbn='1328915336')
->>> for item in availability['Items']['Item']:
+>>> for item in availability['Items']:
 ...     print(f'Branch: {item["BranchName"]}\nStatus: {item["StatusDesc"]}\n')
 ...
 Branch: Ang Mo Kio Public Library
