@@ -4,7 +4,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setup(name='nlbsg',
-      version='0.3.0',
+      version='0.3.1',
       description='Python SDK for the NLB Open Web Services',
       long_description=long_description,
       long_description_content_type='text/markdown',

@@ -1,13 +1,15 @@
+from typing import Union
+
 from zeep import Client as Zeep
 
 from .constants import Branch, MediaCode, Language, Sort
 from .types import SearchResponse, GetTitleDetailsResponse, GetAvailabilityInfoResponse
-from .factories import search_response_factory, get_title_details_response_factory, \
+from ._factories import search_response_factory, get_title_details_response_factory, \
     get_availability_info_response_factory
 
 
 class Client:
-    def __init__(self, wsdl, api_key) -> None:
+    def __init__(self, wsdl: str, api_key: str) -> None:
         self._zeep = Zeep(wsdl)
         self.api_key = api_key
 
@@ -64,9 +66,10 @@ class Client:
             }
         }
 
-    def search(self, keywords=None, author=None, subject=None, title=None,
-               branch=None, media_code=None, language=None,
-               sort=None, start=1, limit=10, set_id=None) -> SearchResponse:
+    def search(self, keywords: str = None, author: str = None, subject: str = None, title: str = None,
+               branch: Union[str, Branch] = None, media_code: Union[str, MediaCode] = None,
+               language: Union[str, Language] = None,
+               sort: Union[str, Sort] = None, start: int = 1, limit: int = 10, set_id: str = None) -> SearchResponse:
         """
         Searches content according to search criteria.
 
@@ -87,7 +90,6 @@ class Client:
         :param set_id: For use in pagination. This can be used with ``start`` to return the index position of
                        the next record in the backend system
         :return:
-        :rtype: SearchResponse
         """
         search_request = self._search_request(self.api_key, keywords, author, subject, title,
                                               branch, media_code, language,
@@ -95,22 +97,22 @@ class Client:
         response = self._zeep.service.Search(**search_request)
         return search_response_factory(response)
 
-    def get_title_details(self, bid=None, isbn=None) -> GetTitleDetailsResponse:
+    def get_title_details(self, bid: str = None, isbn: str = None) -> GetTitleDetailsResponse:
         """
         Get detailed information about an item. Either ``bid`` or ``isbn`` should be provided.
 
         :param bid:
         :param isbn:
         :return:
-        :rtype: GetTitleDetailsResponse
         """
         response = self._zeep.service.GetTitleDetails(APIKey=self.api_key,
                                                       BID=bid,
                                                       ISBN=isbn)
         return get_title_details_response_factory(response)
 
-    def get_availability_info(self, bid=None, isbn=None,
-                              sort=None, start=1, limit=10, set_id=None) -> GetAvailabilityInfoResponse:
+    def get_availability_info(self, bid: str = None, isbn: str = None,
+                              sort: Union[str, Sort] = None, start: int = 1, limit: int = 10,
+                              set_id: str = None) -> GetAvailabilityInfoResponse:
         """
         Check whether an item is available for loan. Either ``bid`` or ``isbn`` should be provided.
 
@@ -125,7 +127,6 @@ class Client:
         :param set_id: For use in pagination. This can be used with ``start`` to return the index position of
                        the next record in the backend system
         :return:
-        :rtype: GetAvailabilityInfoResponse
         """
         response = self._zeep.service.GetAvailabilityInfo(APIKey=self.api_key,
                                                           BID=bid,

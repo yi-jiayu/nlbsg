@@ -8,7 +8,6 @@ nlbsg.catalog module
 .. automodule:: nlbsg.catalog
     :members:
     :undoc-members:
-    :show-inheritance:
 
 nlbsg.constants module
 ----------------------
@@ -17,3 +16,10 @@ nlbsg.constants module
     :members:
     :undoc-members:
     :show-inheritance:
+
+nlbsg.types module
+--------------------
+
+.. automodule:: nlbsg.types
+    :members:
+    :undoc-members:
