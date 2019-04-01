@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/yi-jiayu/nlbsg.svg?branch=master)](https://travis-ci.com/yi-jiayu/nlbsg)
 [![codecov](https://codecov.io/gh/yi-jiayu/nlbsg/branch/master/graph/badge.svg)](https://codecov.io/gh/yi-jiayu/nlbsg)
+[![Documentation Status](https://readthedocs.org/projects/nlbsg/badge/?version=latest)](https://nlbsg.readthedocs.io/en/latest/?badge=latest)
 
 # nlbsg
 Python SDK for the [NLB Open Web Services](http://www.nlb.gov.sg/labs/technical-documentation/)
