@@ -8,4 +8,4 @@ install:
 script:
   - pipenv run python -m pytest --cov
 after_success:
-  - codecov
+  - pipenv run bash <(curl -s https://codecov.io/bash)
