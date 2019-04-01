@@ -51,3 +51,5 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 default_role = 'any'
+
+master_doc = 'index'
