@@ -1,6 +1,8 @@
-from nlbsg.types import SearchResponse, Title, GetTitleDetailsResponse, TitleDetail, Item, GetAvailabilityInfoResponse
-from nlbsg._factories import search_response_factory, get_title_details_response_factory, \
-    get_availability_info_response_factory
+from nlbsg._factories import (get_availability_info_response_factory,
+                              get_title_details_response_factory,
+                              search_response_factory)
+from nlbsg.types import (GetAvailabilityInfoResponse, GetTitleDetailsResponse,
+                         Item, SearchResponse, Title, TitleDetail)
 
 
 class TestSearchResponseFactory:

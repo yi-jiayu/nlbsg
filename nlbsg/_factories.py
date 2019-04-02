@@ -1,4 +1,5 @@
-from .types import SearchResponse, Title, GetTitleDetailsResponse, TitleDetail, Item, GetAvailabilityInfoResponse
+from .types import (GetAvailabilityInfoResponse, GetTitleDetailsResponse, Item,
+                    SearchResponse, Title, TitleDetail)
 
 
 def search_response_factory(response):

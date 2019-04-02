@@ -2,10 +2,12 @@ from typing import Union
 
 from zeep import Client as Zeep
 
-from .constants import Branch, MediaCode, Language, Sort
-from .types import SearchResponse, GetTitleDetailsResponse, GetAvailabilityInfoResponse
-from ._factories import search_response_factory, get_title_details_response_factory, \
-    get_availability_info_response_factory
+from ._factories import (get_availability_info_response_factory,
+                         get_title_details_response_factory,
+                         search_response_factory)
+from .constants import Branch, Language, MediaCode, Sort
+from .types import (GetAvailabilityInfoResponse, GetTitleDetailsResponse,
+                    SearchResponse)
 
 
 class Client:
