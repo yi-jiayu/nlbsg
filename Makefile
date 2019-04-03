@@ -9,7 +9,7 @@ build: version
 	python setup.py sdist bdist_wheel
 
 version:
-	echo "__version__ = '$(shell git describe | sed s/^v//)'" > nlbsg/__version__.py
+	printf "# generated\n__version__ = '$(shell git describe | sed s/^v//)'\n" > nlbsg/__version__.py
 
 publish: build
 	pipenv run twine upload dist/*
