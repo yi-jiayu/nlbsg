@@ -2,10 +2,10 @@ nlbsg package
 =============
 
 
-nlbsg.catalog module
---------------------
+nlbsg.catalogue module
+----------------------
 
-.. automodule:: nlbsg.catalog
+.. automodule:: nlbsg.catalogue
     :members:
     :undoc-members:
 
@@ -18,7 +18,7 @@ nlbsg.constants module
     :show-inheritance:
 
 nlbsg.types module
---------------------
+------------------
 
 .. automodule:: nlbsg.types
     :members:

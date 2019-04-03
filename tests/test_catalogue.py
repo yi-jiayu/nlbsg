@@ -1,4 +1,4 @@
-from nlbsg.catalog import Client
+from nlbsg.catalogue import Client
 from nlbsg.constants import Branch, Language, MediaCode, Sort
 
 
