@@ -16,6 +16,10 @@ Welcome to nlbsg's documentation!
    :target: https://pypi.org/project/nlbsg/
    :alt: PyPI
 
+.. image:: https://img.shields.io/pypi/pyversions/nlbsg.svg
+   :target: https://pypi.org/project/nlbsg/
+   :alt: PyPI - Python Version
+
 .. image:: https://readthedocs.org/projects/nlbsg/badge/?version=latest
    :target: https://nlbsg.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status

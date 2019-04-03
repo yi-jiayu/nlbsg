@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/yi-jiayu/nlbsg.svg?branch=master)](https://travis-ci.com/yi-jiayu/nlbsg)
 [![codecov](https://codecov.io/gh/yi-jiayu/nlbsg/branch/master/graph/badge.svg)](https://codecov.io/gh/yi-jiayu/nlbsg)
 [![PyPI](https://img.shields.io/pypi/v/nlbsg.svg)](https://pypi.org/project/nlbsg/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/nlbsg.svg)](https://pypi.org/project/nlbsg/)
 [![Documentation Status](https://readthedocs.org/projects/nlbsg/badge/?version=latest)](https://nlbsg.readthedocs.io/en/latest/?badge=latest)
 
 # nlbsg
