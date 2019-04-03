@@ -12,7 +12,15 @@ setup(name='nlbsg',
       description='Python SDK for the NLB Open Web Services',
       long_description=long_description,
       long_description_content_type='text/markdown',
+
       url='https://github.com/yi-jiayu/nlbsg',
+      project_urls={
+          'Documentation': 'https://nlbsg.readthedocs.io/en/latest/',
+          'Source code': 'https://github.com/yi-jiayu/nlbsg',
+          'Builds': 'https://travis-ci.com/yi-jiayu/nlbsg',
+          'Coverage': 'https://codecov.io/gh/yi-jiayu/nlbsg',
+      },
+
       author='Jiayu Yi',
       author_email='yijiayu@gmail.com',
       license='MIT',
