@@ -11,7 +11,7 @@ clean:
 	rm -rf dist
 
 build: clean version
-	python setup.py sdist bdist_wheel
+	pipenv run python setup.py sdist bdist_wheel
 	pipenv run twine check $(output)
 
 version:
