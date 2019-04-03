@@ -19,11 +19,11 @@ Creating a client:
 
 ```python
 from nlbsg import Client
+from nlbsg.catalogue import STAGING_URL
 
-WSDL = 'https://openweb-stg.nlb.gov.sg/OWS/CatalogueService.svc?singleWsdl'
 API_KEY = 'secret_api_key'
 
-client = Client(WSDL, API_KEY)
+client = Client(STAGING_URL, API_KEY)
 ```
 
 Searching the catalogue:

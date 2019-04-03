@@ -9,6 +9,9 @@ from .constants import Branch, Language, MediaCode, Sort
 from .types import (GetAvailabilityInfoResponse, GetTitleDetailsResponse,
                     SearchResponse)
 
+PRODUCTION_URL = 'https://openweb.nlb.gov.sg/OWS/CatalogueService.svc?singleWsdl'
+STAGING_URL = 'https://openweb-stg.nlb.gov.sg/OWS/CatalogueService.svc?singleWsdl'
+
 
 class Client:
     def __init__(self, wsdl: str, api_key: str) -> None:
