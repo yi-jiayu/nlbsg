@@ -1,15 +1,21 @@
-.PHONY: clean build version publish
+.PHONY: clean test version build publish
 
-all: clean build
+output = dist/*
+
+all: test build
+
+test:
+	pipenv run python -m pytest --cov
 
 clean:
 	rm -rf dist
 
-build: version
+build: clean version
 	python setup.py sdist bdist_wheel
+	pipenv run twine check $(output)
 
 version:
 	printf "# generated\n__version__ = '$(shell git describe | sed s/^v//)'\n" > nlbsg/__version__.py
 
 publish: build
-	pipenv run twine upload dist/*
+	pipenv run twine upload $(output)

@@ -1,2 +1,2 @@
 # generated
-__version__ = 'HEAD'
+__version__ = '0.3.4'
