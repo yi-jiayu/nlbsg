@@ -1,4 +1,4 @@
-.PHONY: clean test version build publish
+.PHONY: clean test version build publish docs
 
 output = dist/*
 
@@ -19,3 +19,6 @@ version:
 
 publish: build
 	pipenv run twine upload $(output)
+
+docs:
+	$(MAKE) -C docs html
