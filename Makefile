@@ -12,5 +12,4 @@ version:
 	echo "__version__ = '$(shell git describe | sed s/^v//)'" > nlbsg/__version__.py
 
 publish: build
-	twine upload dist/*
-
+	pipenv run twine upload dist/*

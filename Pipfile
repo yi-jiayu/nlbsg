@@ -10,6 +10,7 @@ sphinx = "*"
 pipenv-to-requirements = "*"
 sphinx-rtd-theme = "*"
 sphinx-autodoc-typehints = "*"
+twine = "*"
 
 [packages]
 zeep = "*"
