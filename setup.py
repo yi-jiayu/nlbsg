@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('README.md') as f:
+with open('docs/index.rst') as f:
     long_description = f.read()
 
 version = {}
@@ -10,7 +10,7 @@ with open("nlbsg/__version__.py") as f:
 setup(name='nlbsg',
       version=version['__version__'],
       description='Python SDK for the NLB Open Web Services',
-      long_description_content_type='text/markdown',
+      long_description_content_type='text/x-rst',
       long_description=long_description,
       url='https://github.com/yi-jiayu/nlbsg',
       author='Jiayu Yi',
