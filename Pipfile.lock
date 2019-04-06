@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0466186b4dae72a456661014e90b753e3fa05b131a4cd011e3ca88c10a74423a"
+            "sha256": "7d71317aa6f4a4e70ace4128bc9ed7109f0bb843a9f4142bd3b30db33e81aa10"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -310,29 +310,6 @@
             ],
             "version": "==19.0"
         },
-        "pbr": {
-            "hashes": [
-                "sha256:8257baf496c8522437e8a6cfe0f15e00aedc6c0e0e7c9d55eeeeab31e0853843",
-                "sha256:8c361cc353d988e4f5b998555c88098b9d5964c2e11acf7b0d21925a66bb5824"
-            ],
-            "version": "==5.1.3"
-        },
-        "pipenv": {
-            "hashes": [
-                "sha256:56ad5f5cb48f1e58878e14525a6e3129d4306049cb76d2f6a3e95df0d5fc6330",
-                "sha256:7df8e33a2387de6f537836f48ac6fcd94eda6ed9ba3d5e3fd52e35b5bc7ff49e",
-                "sha256:a673e606e8452185e9817a987572b55360f4d28b50831ef3b42ac3cab3fee846"
-            ],
-            "version": "==2018.11.26"
-        },
-        "pipenv-to-requirements": {
-            "hashes": [
-                "sha256:04dc5b1fedfea18858efe3f28d62ed70ac0cd04c34bc32a8c3531384d11be460",
-                "sha256:44bfefa3f6ded62e3bdcc5a6bb4de7a821b2658f821c1126f6abc3bffecb2c1e"
-            ],
-            "index": "pypi",
-            "version": "==0.7.1"
-        },
         "pkginfo": {
             "hashes": [
                 "sha256:7424f2c8511c186cd5424bbf31045b77435b37a8d604990b79d4e70d741148bb",
@@ -487,10 +464,10 @@
         },
         "sphinxcontrib-serializinghtml": {
             "hashes": [
-                "sha256:01d9b2617d7e8ddf7a00cae091f08f9fa4db587cc160b493141ee56710810932",
-                "sha256:392187ac558863b8aff0d76dc78e0731fed58f3b06e2b00e22995dcdb630f213"
+                "sha256:c0efb33f8052c04fd7a26c0a07f1678e8512e0faec19f4aa8f2473a8b81d5227",
+                "sha256:db6615af393650bf1151a6cd39120c29abaf93cc60db8c48eb2dddbfdc3a9768"
             ],
-            "version": "==1.1.1"
+            "version": "==1.1.3"
         },
         "tqdm": {
             "hashes": [
@@ -513,20 +490,6 @@
                 "sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22"
             ],
             "version": "==1.24.1"
-        },
-        "virtualenv": {
-            "hashes": [
-                "sha256:6aebaf4dd2568a0094225ebbca987859e369e3e5c22dc7d52e5406d504890417",
-                "sha256:984d7e607b0a5d1329425dd8845bd971b957424b5ba664729fab51ab8c11bc39"
-            ],
-            "version": "==16.4.3"
-        },
-        "virtualenv-clone": {
-            "hashes": [
-                "sha256:1349815ebc77b495c2346fac27d851fcd7b9f8596985bbf867f075e9fcdfe571",
-                "sha256:f4f1d0d73adbc87bc9bfe14a7fd1025c48e46c449b625e6ba3edc5f22b305a1f"
-            ],
-            "version": "==0.5.2"
         },
         "webencodings": {
             "hashes": [

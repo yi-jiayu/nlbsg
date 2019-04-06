@@ -7,7 +7,6 @@ verify_ssl = true
 pytest = "*"
 pytest-cov = "*"
 sphinx = "*"
-pipenv-to-requirements = "*"
 sphinx-rtd-theme = "*"
 sphinx-autodoc-typehints = "*"
 twine = "*"
