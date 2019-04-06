@@ -5,7 +5,7 @@ output = dist/*
 all: test build
 
 test:
-	pipenv run python -m pytest --cov
+	pipenv run python -m pytest -vv --cov
 
 clean:
 	rm -rf dist
