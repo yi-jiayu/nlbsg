@@ -1,7 +1,8 @@
 from setuptools import setup
 
 with open('docs/index.rst') as f:
-    long_description = f.read()
+    s = f.read()
+    long_description = s.split('\n.. LONG DESCRIPTION ENDS HERE')[0]
 
 version = {}
 with open("nlbsg/__version__.py") as f:

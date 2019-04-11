@@ -108,6 +108,8 @@ Getting title availability::
     Branch: Geylang East Public Library
     Status: Not On Loan
 
+.. LONG DESCRIPTION ENDS HERE
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
