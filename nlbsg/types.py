@@ -217,6 +217,7 @@ Part of `GetAvailabilityInfoResponse`.
 :var Optional[str] category_name:
 :var Optional[str] collection_code:
 :var Optional[str] collection_min_age_limit:
+:var bool not_on_loan:
 
 Example `Item`::
 
@@ -236,7 +237,8 @@ Example `Item`::
         cluster_name=None,
         category_name=None,
         collection_code=None,
-        collection_min_age_limit=None
+        collection_min_age_limit=None,
+        not_on_loan=False,
     )
 
     """
