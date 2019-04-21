@@ -77,6 +77,7 @@ def get_availability_info_response_factory(response):
                 category_name=item['CategoryName'],
                 collection_code=item['CollectionCode'],
                 collection_min_age_limit=item['CollectionMinAgeLimit'],
+                not_on_loan=True if item['StatusDesc'] == "Not On Loan" else False,
             ))
     except TypeError:
         items = None
