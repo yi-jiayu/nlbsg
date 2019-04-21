@@ -238,7 +238,8 @@ class TestGetAvailabilityInfoResponseFactory:
                     cluster_name=None,
                     category_name=None,
                     collection_code=None,
-                    collection_min_age_limit=None
+                    collection_min_age_limit=None,
+                    not_on_loan=True
                 ),
                 Item(
                     item_no='B33315118C',
@@ -256,7 +257,8 @@ class TestGetAvailabilityInfoResponseFactory:
                     cluster_name=None,
                     category_name=None,
                     collection_code=None,
-                    collection_min_age_limit=None
+                    collection_min_age_limit=None,
+                    not_on_loan=False
                 )
             ]))
         assert actual == expected
