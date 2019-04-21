@@ -256,6 +256,7 @@ Example `Item`::
     category_name: Optional[str]
     collection_code: Optional[str]
     collection_min_age_limit: Optional[str]
+    not_on_loan: bool
 
 
 @dataclass
