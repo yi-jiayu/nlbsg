@@ -15,7 +15,7 @@ build: clean version
 	pipenv run twine check $(output)
 
 version:
-	printf "# generated\n__version__ = '$(shell git describe | sed s/^v//)'\n" > nlbsg/__version__.py
+	printf "# generated\n__version__ = \"$(shell git describe | sed s/^v//)\"\n" > nlbsg/__version__.py
 
 publish: build
 	pipenv run twine upload $(output)
