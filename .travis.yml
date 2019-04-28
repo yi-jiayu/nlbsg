@@ -5,6 +5,8 @@ python:
 install:
   - pip install pipenv
   - pipenv install --dev
+before_script:
+  - pipenv run black --check .
 script:
   - pipenv run python -m pytest -vv --cov
 after_success:

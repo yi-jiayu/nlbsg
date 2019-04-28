@@ -21,6 +21,10 @@ Refer to the documentation at https://nlbsg.readthedocs.io/en/latest/.
 
 nlbsg uses [Pipenv](https://github.com/pypa/pipenv) for package management.
 
+[black](https://github.com/ambv/black) is used for code formatting. Install the pre-commit hook with:
+
+    make hooks
+
 To install development dependencies:
 
     pipenv install --dev

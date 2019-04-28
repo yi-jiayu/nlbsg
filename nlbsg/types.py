@@ -28,6 +28,7 @@ Example `Title`::
     )
 
     """
+
     bid: str
     isbn: str
     title_name: str
@@ -82,6 +83,7 @@ Example `SearchResponse`::
     )
 
     """
+
     status: str
     message: str
     error_message: Optional[str]
@@ -135,6 +137,7 @@ Example `TitleDetail`::
     )
 
     """
+
     bid: str
     title_name: str
     author: str
@@ -190,6 +193,7 @@ Example `GetTitleDetailsResponse`::
     )
 
     """
+
     status: str
     message: str
     error_message: Optional[str]
@@ -242,6 +246,7 @@ Example `Item`::
     )
 
     """
+
     item_no: str
     branch_id: str
     branch_name: str
@@ -322,6 +327,7 @@ Example `GetAvailabilityInfoResponse`::
     )
 
     """
+
     status: str
     message: str
     error_message: Optional[str]

@@ -1,4 +1,4 @@
-.PHONY: clean test version build publish docs
+.PHONY: hooks clean test version build publish docs
 
 output = dist/*
 
@@ -22,3 +22,6 @@ publish: build
 
 docs:
 	$(MAKE) -C docs html
+
+hooks:
+	cp -f pre-commit .git/hooks/

@@ -10,9 +10,13 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 sphinx-autodoc-typehints = "*"
 twine = "*"
+black = "*"
 
 [packages]
 zeep = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
