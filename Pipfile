@@ -11,6 +11,7 @@ sphinx-rtd-theme = "*"
 sphinx-autodoc-typehints = "*"
 twine = "*"
 black = "*"
+pre-commit = "*"
 
 [packages]
 zeep = "*"

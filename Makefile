@@ -24,4 +24,4 @@ docs:
 	$(MAKE) -C docs html
 
 hooks:
-	cp -f pre-commit .git/hooks/
+	pipenv run pre-commit install
