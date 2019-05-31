@@ -2,7 +2,7 @@
 
 set -e
 
-files=$(git diff --cached --name-only --diff-filter=d *.py)
+files=$(git diff --cached --name-only --diff-filter=d '*.py')
 if [ ! -z "$files" ]; then
 	echo "Running black on the following file(s): $files"
 	pipenv run black $files
