@@ -21,7 +21,7 @@ MarkupSafe==1.1.1
 more-itertools==7.0.0
 packaging==19.0
 pbr==5.1.3
-pipenv==2018.11.26
+pipenv==2022.1.8
 pipenv-to-requirements==0.7.1
 pkginfo==1.5.0.1
 pluggy==0.9.0
